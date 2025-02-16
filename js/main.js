@@ -11,7 +11,7 @@ form.addEventListener('submit', async (e) => {
     };
 
     try{
-      const response = await fetch('https://github.com/Prashant2raja/portfolio',{
+      const response = await fetch('https://portfolio-cv-cc64f984f5ce.herokuapp.com/api/contact',{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
