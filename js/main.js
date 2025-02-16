@@ -10,7 +10,7 @@ form.addEventListener('submit', async (e) => {
     };
 
     try {
-      const response = await fetch('https://portfolio-backend-two-mocha.vercel.app/api/messages', {
+      const response = await fetch('https://prashant-cv-207c906be156.herokuapp.com/api/messages', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
