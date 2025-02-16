@@ -11,7 +11,7 @@ form.addEventListener('submit', async (e) => {
     };
 
     try{
-      const response = await fetch('https://prashantcv.netlify.app//',{
+      const response = await fetch('https://prashantcv.netlify.app/',{
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
