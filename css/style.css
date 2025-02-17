@@ -228,6 +228,8 @@ footer p {
   color: #fff;
   margin: 0 0 10px;
   font-size: 0.9rem;
+  text-align: center;
+
 }
 
 /* Social Links Container */
@@ -254,54 +256,64 @@ footer p {
 }
 
   /* =============================
-     Responsive Styles for iPhone Series
-     (max-width: 480px)
+     Responsive Styles for Phone 
      ============================= */
-   @media only screen and (max-width: 480px) 
-  {
-    nav ul {
-      flex-direction: column;
-      gap: 10px;
-    }
-    
-    .header-content {
-      padding: 0 10px;
-    }
-    
-    .profile-photo {
-      width: 100px;
-      height: 100px;
-      margin-top: 20px;
-    }
-    
-    header h1 {
-      font-size: 2rem;
-    }
-    
-    .download-cv-btn {
-      padding: 8px 16px;
-      font-size: 0.9rem;
-    }
-    
-    main {
-      padding: 10px;
-    }
-    
-    #about,
-    #projects,
-    #contact {
-      padding: 20px 10px;
-    }
-    
-    .project-grid {
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    #contact form {
-      width: 100%;
-      padding: 0 10px;
-    }
-  } 
+   /* Default styles (for larger screens) */
+nav ul {
+  display: flex;
+  gap: 20px; /* Adjust based on your design */
+}
+
+p {
+  text-align: left;
+}
+/* For small screens */
+@media only screen and (max-width: 480px) {
+  nav ul {
+    flex-direction: row;
+    gap: 10px; /* Adjusted for smaller screens */
+  }
+  
+  .header-content {
+    padding: 0 10px;
+  }
+
+  .profile-photo {
+    width: 80px; /* Smaller profile photo for small screens */
+    height: 80px;
+    margin-top: 20px;
+  }
+
+  header h1 {
+    font-size: 1.5rem; 
+  }
+
+  .download-cv-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  #about, #projects, #contact {
+    padding: 15px 10px; 
+  }
+
+  .project-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contact form {
+    width: 100%;
+    padding: 0 10px;
+  }
+  p {
+    text-align: left;
+  }
+}
+
    
   
