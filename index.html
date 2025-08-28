@@ -8,7 +8,10 @@
     <meta name="keywords" content="Prashant Kumar, Full-Stack Developer, MERN, Node.js, React, Web Developer Portfolio">
     <meta property="og:title" content="Prashant Kumar | Portfolio">
     <meta property="og:description" content="Explore my projects and skills in full-stack web development.">
-    <meta property="og:image" content="images/profile.jpg"> <meta property="og:url" content="https://your-live-url.com"> <title>Prashant Kumar | Portfolio</title>
+    <meta property="og:image" content="images/profile.jpg">
+    <meta property="og:url" content="https://prashantcv.netlify.app/">
+
+    <title>Prashant Kumar | Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -18,7 +21,12 @@
     <header>
         <nav>
             <div class="nav-container">
-                <a href="#" class="nav-logo">PK.</a>
+                <a href="#" class="nav-logo" aria-label="Prashant Kumar Home">
+                    <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 80V20H45C57.7279 20 69 31.2721 69 44C69 56.7279 57.7279 68 45 68H20" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M48 44L78 74" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
@@ -80,30 +88,36 @@
                 <h2>My Projects</h2>
                 <div class="project-grid">
                     <article class="project">
-                        <img src="https://via.placeholder.com/400x250/1a1a1a/ffffff?text=Study+Palace" alt="Study Palace Project Screenshot">
-                        <h3>Study Palace</h3>
-                        <p>A full-stack seat booking platform with a Node.js backend, MySQL, and Razorpay integration for subscription-based access.</p>
+                        <img src="images/study-palace.png" alt="Study Palace Project Screenshot"> <h3>Study Palace Seat Booking</h3>
+                        <p>
+                            <strong>Goal:</strong> To develop a full-stack, subscription-based seat booking platform for a library with secure payments and an admin dashboard.
+                            <br><strong>Key Challenge:</strong> Ensuring real-time seat availability and preventing double-bookings during concurrent user sessions.
+                        </p>
                         <div class="project-links">
-                            <a href="https://studylibrary.netlify.app" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="study-palace-case-study.html">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
                             <a href="https://github.com/Prashant2raja/" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
                         </div>
                     </article>
                     <article class="project">
-                        <img src="https://via.placeholder.com/400x250/1a1a1a/ffffff?text=Portfolio" alt="Portfolio Project Screenshot">
-                        <h3>Dynamic Portfolio</h3>
-                        <p>A responsive portfolio with a MongoDB backend to capture messages from the contact form in real-time.</p>
+                        <img src="images/portfolio.png" alt="Portfolio Project Screenshot"> <h3>Dynamic Portfolio Website</h3>
+                        <p>
+                            <strong>Goal:</strong> To build a personal portfolio with a dynamic backend to capture and store user messages from a contact form.
+                            <br><strong>Key Challenge:</strong> Implementing a secure API to handle form submissions and integrating it with a front-end hosted on a separate service.
+                        </p>
                         <div class="project-links">
-                            <a href="https://prashantcv.netlify.app" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            <a href="portfolio-case-study.html">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
                             <a href="https://github.com/Prashant2raja/" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
                         </div>
                     </article>
                     <article class="project">
                         <img src="https://via.placeholder.com/400x250/1a1a1a/ffffff?text=New+Project" alt="Upcoming Project Screenshot">
                         <h3>Upcoming Project</h3>
-                        <p>Exciting new project under development. Details will be updated soon. Stay tuned for more information!</p>
+                        <p>
+                           An exciting new project is under development, focusing on real-time chat with WebSockets. More details to come!
+                        </p>
                         <div class="project-links">
-                            <a href="#" target="_blank">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                            <a href="#" target="_blank">GitHub <i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="disabled-link">Coming Soon</a>
+                            <a href="#" class="disabled-link">GitHub</a>
                         </div>
                     </article>
                 </div>
@@ -111,37 +125,37 @@
         </section>
 
         <section id="languages" class="hidden">
-            <div class="container">
-                <h2>Languages</h2>
-                <div class="languages-grid">
-                    <span>Python</span><span>Java</span><span>C</span><span>JavaScript</span><span>SQL</span><span>HTML</span><span>CSS</span>
-                </div>
-            </div>
+             <div class="container">
+                 <h2>Languages</h2>
+                 <div class="languages-grid">
+                     <span>Python</span><span>Java</span><span>C</span><span>JavaScript</span><span>SQL</span><span>HTML</span><span>CSS</span>
+                 </div>
+             </div>
         </section>
 
         <section id="certifications" class="hidden">
-            <div class="container">
-                <h2>Certifications</h2>
-                <div class="cert-grid">
-                    <div class="cert-card"><div class="cert-icon"><i class="fa-solid fa-certificate"></i></div><p>MERN Full Stack</p></div>
-                    <div class="cert-card"><div class="cert-icon"><i class="fa-solid fa-certificate"></i></div><p>Decode (Java+DSA)</p></div>
-                    <div class="cert-card"><div class="cert-icon"><i class="fa-solid fa-certificate"></i></div><p>Full Stack Java Developer</p></div>
-                    <div class="cert-card"><div class="cert-icon"><i class="fa-solid fa-certificate"></i></div><p>Salesforce (Admin + Dev)</p></div>
-                </div>
-            </div>
+             <div class="container">
+                 <h2>Certifications</h2>
+                 <div class="cert-grid">
+                     <div class="cert-card"><div class="cert-icon"><i class="fa-solid fa-certificate"></i></div><p>MERN Full Stack</p></div>
+                     <div class="cert-card"><div class="cert-icon"><i class="fa-solid fa-certificate"></i></div><p>Decode (Java+DSA)</p></div>
+                     <div class="cert-card"><div class="cert-icon"><i class="fa-solid fa-certificate"></i></div><p>Full Stack Java Developer</p></div>
+                     <div class="cert-card"><div class="cert-icon"><i class="fa-solid fa-certificate"></i></div><p>Salesforce (Admin + Dev)</p></div>
+                 </div>
+             </div>
         </section>
 
         <section id="contact" class="hidden">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <form action="https://prashant-cv-207c906be156.herokuapp.com/api/messages/" method="post">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                    <button type="submit">Send Message</button>
-                    <div class="form-status"></div>
-                </form>
-            </div>
+             <div class="container">
+                 <h2>Get In Touch</h2>
+                 <form action="https://prashant-cv-207c906be156.herokuapp.com/api/messages/" method="post">
+                     <input type="text" name="name" placeholder="Your Name" required>
+                     <input type="email" name="email" placeholder="Your Email" required>
+                     <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                     <button type="submit">Send Message</button>
+                     <div class="form-status"></div>
+                 </form>
+             </div>
         </section>
     </main>
 
