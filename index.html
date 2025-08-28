@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prashant Kumar | Portfolio</title>
+    
+    <meta name="description" content="Personal portfolio of Prashant Kumar, a full-stack MERN developer specializing in creating scalable web applications.">
+    <meta name="keywords" content="Prashant Kumar, Full-Stack Developer, MERN, Node.js, React, Web Developer Portfolio">
+    <meta property="og:title" content="Prashant Kumar | Portfolio">
+    <meta property="og:description" content="Explore my projects and skills in full-stack web development.">
+    <meta property="og:image" content="images/profile.jpg"> <meta property="og:url" content="https://your-live-url.com"> <title>Prashant Kumar | Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -14,12 +19,16 @@
         <nav>
             <div class="nav-container">
                 <a href="#" class="nav-logo">PK.</a>
-                <ul>
+                <ul class="nav-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <div class="nav-buttons">
+                    <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme"><i class="fa-solid fa-sun"></i></button>
+                    <button class="menu-toggle" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+                </div>
             </div>
         </nav>
         <div class="header-content">
@@ -31,14 +40,14 @@
     </header>
 
     <main>
-        <section id="about">
+        <section id="about" class="hidden">
             <div class="container">
                 <h2>About Me</h2>
                 <p>A results-oriented B.Tech CSE student with a strong foundation in Data Structures & Algorithms and hands-on experience in full-stack web development. Proficient in the MERN stack, I'm passionate about creating scalable, high-performance web solutions with clean code and intuitive user interfaces. Currently exploring containerization with Docker and cloud deployment on AWS.</p>
             </div>
         </section>
 
-        <section id="skills">
+        <section id="skills" class="hidden">
             <div class="container">
                 <h2>Technical Skills</h2>
                 <div class="skills-grid">
@@ -66,7 +75,7 @@
             </div>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="hidden">
             <div class="container">
                 <h2>My Projects</h2>
                 <div class="project-grid">
@@ -101,46 +110,28 @@
             </div>
         </section>
 
-        <section id="languages">
+        <section id="languages" class="hidden">
             <div class="container">
                 <h2>Languages</h2>
                 <div class="languages-grid">
-                    <span>Python</span>
-                    <span>Java</span>
-                    <span>C</span>
-                    <span>JavaScript</span>
-                    <span>SQL</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
+                    <span>Python</span><span>Java</span><span>C</span><span>JavaScript</span><span>SQL</span><span>HTML</span><span>CSS</span>
                 </div>
             </div>
         </section>
 
-        <section id="certifications">
+        <section id="certifications" class="hidden">
             <div class="container">
                 <h2>Certifications</h2>
                 <div class="cert-grid">
-                    <div class="cert-card">
-                        <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
-                        <p>MERN Full Stack</p>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
-                        <p>Decode (Java+DSA)</p>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
-                        <p>Full Stack Java Developer</p>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-icon"><i class="fa-solid fa-certificate"></i></div>
-                        <p>Salesforce (Admin + Dev)</p>
-                    </div>
+                    <div class="cert-card"><div class="cert-icon"><i class="fa-solid fa-certificate"></i></div><p>MERN Full Stack</p></div>
+                    <div class="cert-card"><div class="cert-icon"><i class="fa-solid fa-certificate"></i></div><p>Decode (Java+DSA)</p></div>
+                    <div class="cert-card"><div class="cert-icon"><i class="fa-solid fa-certificate"></i></div><p>Full Stack Java Developer</p></div>
+                    <div class="cert-card"><div class="cert-icon"><i class="fa-solid fa-certificate"></i></div><p>Salesforce (Admin + Dev)</p></div>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="hidden">
             <div class="container">
                 <h2>Get In Touch</h2>
                 <form action="https://prashant-cv-207c906be156.herokuapp.com/api/messages/" method="post">
@@ -148,6 +139,7 @@
                     <input type="email" name="email" placeholder="Your Email" required>
                     <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     <button type="submit">Send Message</button>
+                    <div class="form-status"></div>
                 </form>
             </div>
         </section>
@@ -163,7 +155,10 @@
         <p>&copy; 2025 Prashant Kumar. All rights reserved.</p>
     </footer>
 
+    <a href="#" class="back-to-top-btn" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
     <script src="js/main.js"></script>
 </body>
 </html>
-
