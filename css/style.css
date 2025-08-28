@@ -713,3 +713,20 @@ footer p { font-size: 0.9rem; }
     .nav-links { width: 80%; }
 }
 
+
+/* Add this to your Navigation styles */
+.nav-logo svg {
+    color: var(--heading-color);
+    transition: transform var(--transition-speed) ease;
+}
+
+.nav-logo:hover svg {
+    transform: rotate(-10deg) scale(1.1);
+}
+
+/* Add this to your Project styles */
+.project-links a.disabled-link {
+    color: var(--border-color);
+    cursor: not-allowed;
+    pointer-events: none; /* Makes the link unclickable */
+}
