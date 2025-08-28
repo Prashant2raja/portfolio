@@ -1,3 +1,40 @@
+
+/* =======================================
+   ADDITIONS FOR JAVASCRIPT INTERACTIONS
+   ======================================= */
+
+/* 1. Typing Effect CSS */
+.subtitle.typing::after {
+    content: '|';
+    animation: blink-caret 0.75s step-end infinite;
+    color: var(--accent-color);
+}
+
+@keyframes blink-caret {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+
+/* 2. Reveal on Scroll Animation CSS */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* 3. Active Navigation Link CSS */
+nav ul li a.active {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
 /* =============================
    Google Fonts & CSS Variables
    ============================= */
@@ -478,3 +515,4 @@ footer p {
         height: 120px;
     }
 }
+
