@@ -1,36 +1,3 @@
-const form = document.querySelector('#contact form');
-
-form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-     
-    const formData = {
-      name: form.name.value,
-      email: form.email.value,
-      message: form.message.value,
-    };
-
-    try {
-      const response = await fetch('https://prashant-cv-207c906be156.herokuapp.com/api/messages', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        alert(result.message);
-      } else {
-        alert(result.error || 'Failed to send message');
-      }
-    } catch (err) {
-      console.error(err);
-      alert('Server error. Please try again later.');
-    }
-});
-
 document.addEventListener('DOMContentLoaded', () => {
 
     //================================================
@@ -67,7 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    typeEffect();
+    // Check if the subtitle element exists before running the effect
+    if (subtitle) {
+        typeEffect();
+    }
 
 
     //================================================
@@ -111,4 +81,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach(section => navObserver.observe(section));
 
+
+    //================================================
+    // 4. CONTACT FORM SUBMISSION HANDLING
+    //================================================
+    const form = document.querySelector('#contact form');
+    const formStatus = document.querySelector('.form-status');
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Provide feedback to the user and reset status
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+        formStatus.classList.remove('visible', 'success', 'error');
+
+        const formData = {
+            name: form.name.value,
+            email: form.email.value,
+            message: form.message.value,
+        };
+
+        try {
+            const response = await fetch('https://prashant-cv-207c906be156.herokuapp.com/api/messages', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+
+            if (response.ok && result.success) {
+                // Display success message
+                formStatus.textContent = result.message || 'Message sent successfully!';
+                formStatus.classList.add('success', 'visible');
+                form.reset(); // Clear the form fields after success
+            } else {
+                // Display error message from server
+                formStatus.textContent = result.error || 'Failed to send message. Please try again.';
+                formStatus.classList.add('error', 'visible');
+            }
+        } catch (err) {
+            // Display network or other critical error
+            console.error(err);
+            formStatus.textContent = 'Server error. Please try again later.';
+            formStatus.classList.add('error', 'visible');
+        } finally {
+            // Re-enable the button regardless of outcome
+            submitButton.disabled = false;
+            submitButton.textContent = 'Send Message';
+        }
+    });
 });
